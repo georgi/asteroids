@@ -30,7 +30,9 @@ public class Player : MonoBehaviour
         var asteroid = collision.gameObject.GetComponent<Asteroid> ();
     
         if (asteroid != null) {
+            collider2D.isTrigger = true;
             animator.Play (stateInvincible);
+
             Instantiate (explosion, transform.position, Quaternion.identity);
 
             transform.position = startPosition;

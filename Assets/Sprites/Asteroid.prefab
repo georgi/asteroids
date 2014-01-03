@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 50: {fileID: 5000000}
+  - 95: {fileID: 9500000}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -67,6 +68,20 @@ PolygonCollider2D:
       - {x: .214999989, y: -.119999997}
       - {x: .214999989, y: .140000001}
       - {x: .0850000009, y: .209999993}
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dca5d48a5c5c446629a7dca3e6b378ca, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 0
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1

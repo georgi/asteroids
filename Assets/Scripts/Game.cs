@@ -18,6 +18,7 @@ public class Game : MonoBehaviour
 			            Quaternion.identity) as GameObject;
 
             o.rigidbody2D.AddForce (Random.insideUnitCircle * asteroidVelocity);
+            o.rigidbody2D.AddTorque (Random.Range (-50, 50));
 
             o.transform.localScale += new Vector3 (Random.Range (0, 2), Random.Range (0, 2), 0);
         }
