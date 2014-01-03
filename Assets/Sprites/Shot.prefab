@@ -9,12 +9,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
+  - 95: {fileID: 9500000}
   - 60: {fileID: 6000000}
-  - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
   - 50: {fileID: 5000000}
-  m_Layer: 0
-  m_Name: Asteroid
+  - 114: {fileID: 11400000}
+  - 96: {fileID: 9600000}
+  - 114: {fileID: 11400002}
+  m_Layer: 11
+  m_Name: Shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +29,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.83282042, y: -1.44213641, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.68351126, y: -1.52285457, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!50 &5000000
@@ -54,19 +56,76 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Poly:
     m_Paths:
-    - - {x: -.0649999976, y: .209999993}
-      - {x: -.104999997, y: .199999988}
-      - {x: -.214999989, y: .0199999996}
-      - {x: -.214999989, y: -.119999997}
-      - {x: -.194999993, y: -.149999991}
-      - {x: -.0149999997, y: -.209999993}
-      - {x: .144999996, y: -.209999993}
-      - {x: .214999989, y: -.119999997}
-      - {x: .214999989, y: .140000001}
-      - {x: .0850000009, y: .209999993}
+    - - {x: .119999997, y: -.13499999}
+      - {x: .159999996, y: -.0749999955}
+      - {x: .159999996, y: .144999996}
+      - {x: .159999996, y: .144999996}
+      - {x: -.159999996, y: .144999996}
+      - {x: -.159999996, y: -.0850000009}
+      - {x: -.109999999, y: -.144999996}
+      - {x: -.049999997, y: -.144999996}
+      - {x: -.0399999991, y: -.13499999}
+      - {x: 0, y: -.144999996}
+      - {x: .109999999, y: -.144999996}
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f6172f1064d44fa29a0cc6d45e9eb78, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 0
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
+--- !u!96 &9600000
+TrailRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 3add2e234d0a7468d900ae6b6e5b4fa0, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_Time: 1
+  m_StartWidth: 5
+  m_EndWidth: 0
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 4280493027
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 16777215
+  m_MinVertexDistance: .100000001
+  m_Autodestruct: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,11 +134,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a833b230a11f34e19b98fa1891751dc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c871ecf69610499a8c0501dfa743872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 19800000, guid: 9e8df9a1b07b74d7993c5b8e5bb5c3e1, type: 2}
-  asteroid: {fileID: 100000}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,7 +169,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 9b757bf9af5bd496f9db42cf61cee844, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 575197756e7b24b44a3b3249a8a8413d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

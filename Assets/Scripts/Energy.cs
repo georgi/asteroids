@@ -2,15 +2,9 @@
 using System.Collections;
 
 public class Energy : MonoBehaviour {
-    public PlayerController player;
-    
-    
-    void Start () {
+    public Player player;
 	
-    }
-	
-    void Update () {
-        this.
-	
+    void Update ()
+    {
     }
 }
